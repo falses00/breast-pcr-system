@@ -57,7 +57,7 @@ app.mount("/sample-images", StaticFiles(directory=str(ROOT_DIR / "data" / "sampl
 
 import os
 from fastapi.responses import FileResponse
-frontend_dist = ROOT_DIR.parent / "frontend" / "dist"
+frontend_dist = ROOT_DIR / "frontend" / "dist"
 if frontend_dist.exists():
     app.mount("/assets", StaticFiles(directory=str(frontend_dist / "assets")), name="assets")
     
