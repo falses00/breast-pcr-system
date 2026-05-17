@@ -1,0 +1,90 @@
+[
+  {
+    "model_name": "Local Clinical Logistic Regression",
+    "data_source": "local_35_case_dataset",
+    "sample_count": 33,
+    "accuracy": 0.5757575757575758,
+    "precision": 0.18181818181818182,
+    "recall": 0.2857142857142857,
+    "f1": 0.2222222222222222,
+    "auc": 0.45604395604395603,
+    "confusion_matrix": [
+      [
+        17,
+        9
+      ],
+      [
+        5,
+        2
+      ]
+    ],
+    "task_kind": "本地临床特征pCR演示模型",
+    "disclaimer": "仅用于课程项目辅助分析展示，不作为真实临床诊断依据。"
+  },
+  {
+    "model_name": "Local Image/Radiomics Random Forest",
+    "data_source": "local_35_case_dataset",
+    "sample_count": 33,
+    "accuracy": 0.7272727272727273,
+    "precision": 0.375,
+    "recall": 0.42857142857142855,
+    "f1": 0.4,
+    "auc": 0.6923076923076923,
+    "confusion_matrix": [
+      [
+        21,
+        5
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "task_kind": "本地整图灰度特征演示模型，近似ROI/radiomics流程",
+    "disclaimer": "仅用于课程项目辅助分析展示，不作为真实临床诊断依据。"
+  },
+  {
+    "model_name": "Local Clinical+Image Random Forest",
+    "data_source": "local_35_case_dataset",
+    "sample_count": 33,
+    "accuracy": 0.696969696969697,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "auc": 0.7142857142857143,
+    "confusion_matrix": [
+      [
+        23,
+        3
+      ],
+      [
+        7,
+        0
+      ]
+    ],
+    "task_kind": "本地临床+影像融合pCR演示模型",
+    "disclaimer": "仅用于课程项目辅助分析展示，不作为真实临床诊断依据。"
+  },
+  {
+    "model_name": "Local Clinical+Image Gradient Boosting",
+    "data_source": "local_35_case_dataset",
+    "sample_count": 33,
+    "accuracy": 0.6363636363636364,
+    "precision": 0.14285714285714285,
+    "recall": 0.14285714285714285,
+    "f1": 0.14285714285714285,
+    "auc": 0.4560439560439561,
+    "confusion_matrix": [
+      [
+        20,
+        6
+      ],
+      [
+        6,
+        1
+      ]
+    ],
+    "task_kind": "XGBoost路线的scikit-learn轻量替代，避免额外重依赖",
+    "disclaimer": "仅用于课程项目辅助分析展示，不作为真实临床诊断依据。"
+  }
+]

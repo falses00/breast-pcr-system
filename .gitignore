@@ -1,0 +1,38 @@
+# Node/Vue
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.env.local
+frontend/.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python/FastAPI
+__pycache__/
+*.py[cod]
+*$py.class
+backend/.pytest_cache/
+backend/venv/
+backend/env/
+backend/.venv/
+backend/.env
+
+# Database and Uploads
+backend/data/pcr.db
+backend/data/uploads/*
+!backend/data/uploads/.gitkeep
+backend/data/sample_images/*
+!backend/data/sample_images/.gitkeep
+
+# IDEs and OS
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
