@@ -45,13 +45,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(auth.router)
-app.include_router(patients.router)
-app.include_router(images.router)
-app.include_router(analysis.router)
-app.include_router(audit.router)
-app.include_router(admin.router)
-app.include_router(reports.router)
+from fastapi import APIRouter
+api_router = APIRouter(prefix="/api")
+api_router.include_router(auth.router)
+api_router.include_router(patients.router)
+api_router.include_router(images.router)
+api_router.include_router(analysis.router)
+api_router.include_router(audit.router)
+api_router.include_router(admin.router)
+api_router.include_router(reports.router)
+app.include_router(api_router)
 app.mount("/uploads", StaticFiles(directory=str(ROOT_DIR / "data" / "uploads")), name="uploads")
 app.mount("/sample-images", StaticFiles(directory=str(ROOT_DIR / "data" / "sample_images")), name="sample-images")
 
